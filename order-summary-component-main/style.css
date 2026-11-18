@@ -1,0 +1,146 @@
+:root {
+  --blue-100: hsl(225, 100%, 94%);
+  --blue-700: hsl(245, 75%, 52%);
+  --blue-50: hsl(225, 100%, 98%);
+  --gray-600: hsl(224, 23%, 55%);
+  --blue-950: hsl(223, 47%, 23%);
+  --blue-hover: hsl(245, 83%, 68%);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  background-color: var(--blue-100);
+  background-image: url('./images/pattern-background-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+}
+
+main {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: min(100%, 450px);
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 40px -10px hsl(245 75% 52% / 0.2);
+}
+
+.card__hero {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card__content {
+  padding: 48px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 16px;
+  font-size: 1.75rem;
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--blue-950);
+}
+
+.description {
+  margin-bottom: 24px;
+  color: var(--gray-600);
+}
+
+.plan {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 32px;
+  padding: 24px;
+  text-align: left;
+  background: var(--blue-50);
+  border-radius: 12px;
+}
+
+.plan__icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+}
+
+.plan__info {
+  flex: 1;
+}
+
+.plan__name {
+  font-weight: 700;
+  color: var(--blue-950);
+}
+
+.plan__price {
+  color: var(--gray-600);
+}
+
+.plan a {
+  font-weight: 700;
+  color: var(--blue-700);
+  transition: color 0.2s;
+}
+
+.plan a:hover {
+  color: var(--blue-hover);
+  text-decoration: none;
+}
+
+.btn {
+  display: block;
+  margin-bottom: 24px;
+  padding: 12px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  background: var(--blue-700);
+  border-radius: 10px;
+  box-shadow: 0 20px 20px -10px hsl(245 75% 52% / 0.4);
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: var(--blue-hover);
+}
+
+.cancel {
+  font-weight: 700;
+  color: var(--gray-600);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.cancel:hover {
+  color: var(--blue-950);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--blue-700);
+  outline-offset: 4px;
+}
+
+.attribution {
+  padding: 16px;
+}
